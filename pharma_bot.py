@@ -1,9 +1,9 @@
 import telebot
 from openai import OpenAI
-
-# مفاتيح الدخول
-telegram_token = ""
-openai_api_key = ""
+import os
+# جلب المتغيرات من البيئة
+telegram_token = os.getenv("TELEGRAM_TOKEN")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 bot = telebot.TeleBot(telegram_token)
 client = OpenAI(api_key=openai_api_key)
