@@ -6,7 +6,7 @@ telegram_token = os.getenv("TELEGRAM_TOKEN")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 bot = telebot.TeleBot(telegram_token)
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI()
 
 # دالة توليد الجواب من GPT
 def generate_answer(user_input):
